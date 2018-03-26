@@ -10,7 +10,7 @@ namespace SignalRVoting.SignalR
         {
         }
 
-        public async Task Vote(int id)
+        public async Task Vote(string id)
         {
             await Clients.All.SendAsync("GetVote", id);
         }

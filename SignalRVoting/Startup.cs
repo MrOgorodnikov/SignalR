@@ -51,7 +51,7 @@ namespace SignalRVoting
 
         void HandleAction(Microsoft.AspNetCore.SignalR.HubRouteBuilder obj)
         {
-            obj.MapHub<SignalRHub>("SignalR");
+            obj.MapHub<SignalRHub>("/SignalR");
         }
 
     }
