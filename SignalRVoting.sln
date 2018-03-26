@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRVoting", "SignalRVoting\SignalRVoting.csproj", "{EF3BA95F-68AD-49FD-965F-686CD3FEB790}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6C46BA2E-55DA-4C3D-8382-1F0A04C2D294}"
+	ProjectSection(SolutionItems) = preProject
+		app.json = app.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

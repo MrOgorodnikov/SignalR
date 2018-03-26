@@ -16,4 +16,7 @@
   <ItemGroup>
     <Folder Include="SignalR\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="app.json" />
+  </ItemGroup>
 </Project>
