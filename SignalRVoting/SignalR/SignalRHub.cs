@@ -10,9 +10,14 @@ namespace SignalRVoting.SignalR
         {
         }
 
-        public async Task Vote(string id)
+        public async Task Connect(string sessionCode)
         {
-            await Clients.All.SendAsync("GetVote", id);
+            await Groups.AddAsync(Context.ConnectionId, sessionCode);
+        }
+
+        public async Task Vote(string sessionCode, string message)
+        {
+            await Clients.All.SendAsync("GetVote", message);
         }
     }
 }
