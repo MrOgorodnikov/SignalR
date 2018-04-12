@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<p id='tagP'>If someone write text on Index page, you will see this here without page reloading.</p>
+<div id="chatroom"></div>
+<script>
+    var connection = new signalR.HubConnection('/SignalR');
+    connection.start();
+
+    connection.on('GetVote', function(m, u){
+ 
+            // создает элемент <p> для сообщения пользователя
+            let elem = document.createElement("p");
+            //elem.appendChild(userNameElem);
+            elem.appendChild(document.createTextNode(m));
+ 
+            var firstElem = document.getElementById("chatroom").firstChild;
+            document.getElementById("chatroom").insertBefore(elem, firstElem);
+
+    });
+</script>

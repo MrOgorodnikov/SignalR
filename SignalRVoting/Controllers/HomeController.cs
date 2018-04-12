@@ -15,7 +15,7 @@ namespace SignalRVoting.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult SignalR()
         {
             ViewData["Message"] = "Your application description page.";
 
