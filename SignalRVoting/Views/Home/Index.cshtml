@@ -6,11 +6,8 @@
 <button id="button" onclick="VoteClick()">Send</button>
 <input type="text" id="textInput"/>
 <script>
-    $(document).ready(function () {
-        debugger;
-        var connection = new signalR.HubConnection('/SignalR');
-        connection.start();
-    });
+    var connection = new signalR.HubConnection('/SignalR');
+    connection.start();
     
     function VoteClick(){
         let t = $("#textInput").val();

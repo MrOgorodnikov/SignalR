@@ -15,11 +15,11 @@ namespace SignalRVoting.Controllers
             return View();
         }
 
-        public IActionResult SignalR()
+        public IActionResult SignalR1()
         {
             ViewData["Message"] = "Your application description page.";
 
-            return View();
+            return View("SignalR");
         }
 
         public IActionResult Contact()
